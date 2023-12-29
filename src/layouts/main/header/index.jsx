@@ -8,6 +8,7 @@ import SearchBar from "./search-bar";
 
 export default function Header() {
    return(
+            <NetflixLogo />
       </header>
    )
 }
