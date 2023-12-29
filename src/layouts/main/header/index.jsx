@@ -27,6 +27,10 @@ export default function Header() {
                   </NavLink>
                ))}
             </nav>
+            <div className="flex absolute right-0">
+            <div className=" mr-6">
+               <SearchBar/>
+            </div>
       </header>
    )
 }
