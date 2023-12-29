@@ -40,6 +40,16 @@ export default function Header() {
                      </path>
                   </svg>
                </button>
+               <div className="flex items-center justify-center cursor-pointer">
+                  <img 
+                     className=" w-8 h-8 rounded-md"
+                     src="https://occ-0-7330-1490.1.nflxso.net/dnm/api/v6/vN7bi_My87NPKvsBoib006Llxzg/AAAABdd49moEsEFKTKDZsK17AC2zdae3-Gcz3IV9avV0l2LW5jn5Mg7ZgbHYkG8eQeLj2Fd_sstZ0PTRRDQoU4mpFG9TPqz7CsY.png?r=3e2" 
+                     alt=""
+                  />
+                  <span className="ml-[5px]"><IoMdArrowDropdown /></span>
+               </div>
+            </div>
+         </div>
       </header>
    )
 }
