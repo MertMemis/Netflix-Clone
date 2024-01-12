@@ -15,7 +15,6 @@ export default function Row({ title, fetchUrl }) {
     fetchData();
   }, [fetchUrl]);
 
-  console.table(movies);
   return (
     <div className="">
       <h2>{title}</h2>
