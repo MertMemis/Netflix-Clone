@@ -1,9 +1,12 @@
+import Banner from "~/components/banner";
 import Row from "~/components/movie-row/index.jsx";
 import requests from "~/utils/api/requests";
 
 export default function Home() {
   return (
     <div>
+      <Banner />
+
       <Row title="Popular on Netflix" fetchUrl={requests.fetchPopularNetflix} />
       <Row title="Trending Now" fetchUrl={requests.fetchTrending} />
       <Row title="Top Rating" fetchUrl={requests.fetchTopRated} />
