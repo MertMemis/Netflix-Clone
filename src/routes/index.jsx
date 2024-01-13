@@ -9,56 +9,46 @@ import Movies from "~/pages/movies";
 import MyList from "~/pages/my-list";
 import NotFound from "~/pages/not-found";
 import TvShows from "~/pages/tv-shows";
-import MainLayout from "~/layouts/main";
-
-
 
 export const routes = createBrowserRouter([
-   {
-      path: '/',
-      element: <MainLayout />,
-      children: [
-         {
-            index: true,
-            element: <Home />
-         },
-         {
-            path: '/tv-shows',
-            element: <TvShows />
-         },
-         {
-            path: '/movies',
-            element: <Movies />
-         },
-         {
-            path: '/latest',
-            element: <Latest />
-         },
-         {
-            path: '/my-list',
-            element: <MyList />
-         },
-         {
-            path: '/original-audio',
-            element: <OriginalLanguage />
-         },
-         {
-            path: '/audio',
-            element: <Dubbing />
-         },
-         {
-            path: '/subtitles',
-            element: <Subtitles />
-         }
-      ]
-   },
-   
-   {
-      path: '/opening',
-      element: <Opening />
-   }, 
-   {
-      path: '*',
-      element: <NotFound/>
-   }
-])
+  {
+    index: "/",
+    element: <Home />,
+  },
+  {
+    path: "/tv-shows",
+    element: <TvShows />,
+  },
+  {
+    path: "/movies",
+    element: <Movies />,
+  },
+  {
+    path: "/latest",
+    element: <Latest />,
+  },
+  {
+    path: "/my-list",
+    element: <MyList />,
+  },
+  {
+    path: "/original-audio",
+    element: <OriginalLanguage />,
+  },
+  {
+    path: "/audio",
+    element: <Dubbing />,
+  },
+  {
+    path: "/subtitles",
+    element: <Subtitles />,
+  },
+  {
+    path: "/opening",
+    element: <Opening />,
+  },
+  {
+    path: "*",
+    element: <NotFound />,
+  },
+]);
