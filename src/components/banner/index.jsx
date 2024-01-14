@@ -36,13 +36,17 @@ export default function Banner() {
         backgroundPosition: "center center",
       }}
     >
-      <div>
-        <h1>{movie?.title || movie?.name || movie?.original_name}</h1>
+      <div className=" ml-16 pt-80 h-full">
+        <h1 className=" text-[3rem] pb-1 font-bold">
+          {movie?.title || movie?.name || movie?.original_name}
+        </h1>
+        <h1 className=" w-[45rem] pt-4 text-4 leading-snug">
+          {movie?.overview}
+        </h1>
         <div>
           <button>Play</button>
           <button>More Info</button>
         </div>
-        <h1>{movie?.overview}</h1>
       </div>
     </header>
   );
