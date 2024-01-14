@@ -3,5 +3,5 @@
 @tailwind utilities;
 
 body{
-   @apply bg-[#141414] text-[#e5e5e5]
+   @apply bg-[#141414] text-[#e5e5e5] overflow-x-hidden
 }
