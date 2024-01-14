@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import NetflixLogo from "~/assets/logo/netflix-logo";
 import { IoMdArrowDropdown } from "react-icons/io";
 import { NavLink } from "react-router-dom";
@@ -7,9 +7,29 @@ import classNames from "classnames";
 import SearchBar from "./search-bar";
 
 export default function Header() {
+  const [scrolling, setScrolling] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const isTop = window.scrollY < 10;
+      if (isTop !== scrolling) {
+        setScrolling(isTop);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [scrolling]);
+
   return (
     <div className="top-0 w-full inset-x-0 sticky">
-      <header className="bg-black min-h-[70px] flex absolute w-full z-[20]">
+      <header
+        className={`${
+          scrolling ? "bg-transparent" : "bg-black"
+        } transition-colors duration-500 min-h-[70px] flex absolute w-full z-[20]`}
+      >
         <div className="flex items-center sticky mx-[60px] w-full">
           <NetflixLogo />
           <nav className=" flex item-center invisible md:visible">
