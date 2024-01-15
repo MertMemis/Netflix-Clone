@@ -53,7 +53,7 @@ export default function Header() {
             ))}
           </nav>
           <div className="flex absolute right-0">
-            <div className=" mr-6">
+            <div className=" mr-6 ">
               <SearchBar />
             </div>
             <button className=" w-8 mr-[15px]">
