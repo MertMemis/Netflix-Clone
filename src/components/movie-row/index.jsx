@@ -16,15 +16,15 @@ export default function Row({ title, fetchUrl }) {
   }, [fetchUrl]);
 
   return (
-    <div className="">
-      <h2>{title}</h2>
+    <div className=" ml-20">
+      <h2 className=" text-2xl mb-6">{title}</h2>
 
       <div className="flex">
         {movies.map((movie) => (
           <img
             src={`${base_url}${movie.backdrop_path}`}
             alt={movie.name}
-            className="w-full object-contain max-h-[100px] mr-[10px] transition duration-450 hover:scale-105"
+            className="w-full object-contain max-h-[150px] mr-[10px] rounded transition duration-450 hover:scale-105"
           />
         ))}
       </div>
