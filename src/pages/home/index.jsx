@@ -9,16 +9,21 @@ export default function Home() {
       <div className="relative">
         <Header />
         <Banner />
-      </div>
 
-      <Row title="Popular on Netflix" fetchUrl={requests.fetchPopularNetflix} />
-      <Row title="Trending Now" fetchUrl={requests.fetchTrending} />
-      <Row title="Top Rating" fetchUrl={requests.fetchTopRated} />
-      <Row title="Action Movies" fetchUrl={requests.fetchActionMovies} />
-      <Row title="Comedy Movies" fetchUrl={requests.fetchComedyMovies} />
-      <Row title="Horror Movies" fetchUrl={requests.fetchHorrorMovies} />
-      <Row title="Romance Movies" fetchUrl={requests.fetchRomanceMovies} />
-      <Row title="Documantaries" fetchUrl={requests.fetchDocumantaries} />
+        <div className=" relative z-10">
+          <Row
+            title="Popular on Netflix"
+            fetchUrl={requests.fetchPopularNetflix}
+          />
+          <Row title="Trending Now" fetchUrl={requests.fetchTrending} />
+          <Row title="Top Rating" fetchUrl={requests.fetchTopRated} />
+          <Row title="Action Movies" fetchUrl={requests.fetchActionMovies} />
+          <Row title="Comedy Movies" fetchUrl={requests.fetchComedyMovies} />
+          <Row title="Horror Movies" fetchUrl={requests.fetchHorrorMovies} />
+          <Row title="Romance Movies" fetchUrl={requests.fetchRomanceMovies} />
+          <Row title="Documantaries" fetchUrl={requests.fetchDocumantaries} />
+        </div>
+      </div>
     </div>
   );
 }
