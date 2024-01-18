@@ -24,7 +24,7 @@ export default function Header() {
   }, [scrolling]);
 
   return (
-    <div className="top-0 w-full inset-x-0 sticky">
+    <div className="top-0 w-full inset-x-0 sticky z-20">
       <header
         className={`${
           scrolling ? "bg-transparent" : "bg-black"
